@@ -39,6 +39,4 @@ public class Robots implements Serializable {
                 .add(rightArm.getCost())
                 .add(head.getCost());
     }
-
-
 }

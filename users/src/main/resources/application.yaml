@@ -7,15 +7,15 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true #opcional
   application:
-    name: parts-microservice
+    name: users-microservice
   datasource:
-    url: jdbc:mysql://localhost:3306/senairobots?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/senaiusers?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
-  port: 8080
+  port: 8081
 
 eureka:
   client:
@@ -26,6 +26,3 @@ eureka:
   instance:
     hostname: localhost
 
-app:
-  users-microservice:
-    url: 'http://localhost:8000/users-microservice'

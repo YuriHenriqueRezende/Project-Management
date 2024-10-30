@@ -37,7 +37,7 @@ public class PartsController {
         return ResponseEntity.ok(parts);
     }
 
-    @PostMapping("/parts")
+    @PostMapping//("/parts")
     public ResponseEntity<List<Parts>> addNewPart(@RequestBody @Valid List<PartsDto> parts) {
 
         List<Parts> partsList = parts.stream().map(dto -> {
@@ -58,7 +58,7 @@ public class PartsController {
     }
 
 
-    @PutMapping("/parts/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Parts> updatePart(
             @PathVariable UUID id,
             @RequestBody @Valid UpdatePartsDto part) {
@@ -71,7 +71,7 @@ public class PartsController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("/parts/{id}")
+    @DeleteMapping("/{id}")
     public void deletePart(@PathVariable UUID id) {
         partsService.deletePart(id);
     }
